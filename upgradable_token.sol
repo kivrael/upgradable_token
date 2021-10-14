@@ -9,7 +9,8 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 contract TESTCOIN is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
     /// @custom:oz-upgrades-unsafe-allow constructor
-//    constructor() initializer {}
+//    constructor() initializer {}  // The constructor came from openzeppelin's wizard (https://docs.openzeppelin.com/contracts/4.x/wizard)
+                                    // But I commented it to solve a problem I had : the contract owner was be the address 0 instead of the address of the account which deployed the contract. 
 
     function initialize() initializer public {
         __ERC20_init("TestCoin", "TC");
