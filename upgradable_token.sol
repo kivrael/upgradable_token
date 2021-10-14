@@ -27,5 +27,7 @@ contract TESTCOIN is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         override
     {}
 
+    //uint _value;
+    //function getUint() public view returns (uint) { return _value; } // random function I add to make an upgrade
     
 }
